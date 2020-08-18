@@ -1,0 +1,125 @@
+body{
+		padding:0;
+		margin:0;
+		}
+nav{
+		position:relative;
+		width:80%;
+		heigh:40%;
+		}
+.openNav{
+		font-size:30px;
+		position: absolute;
+		width:max-content;
+		height:0px;
+		background-color:#123456;
+		border-radius:0% 0% 100% 0%;
+		box-shadow:
+		inset -3px -3px 0px 2px rgba(18,52,86,.3),
+		inset -3px -3px 0px 3px rgba(255,255,255,1),
+		0 0 0 1px rgba(255,255,255,1);
+		}
+.openNav .hamburger{
+		background-color:#2b7ed1;
+		width:max-content;
+		padding:10px;
+		border:2px solid rgba(255,255,255,.6);
+		margin:15px;
+		color:rgba(255,255,255,.8);
+		}
+
+
+/*ANIMATE OPEN NAVIGATION*/
+
+@keyframes animateNav{
+		0%{height:0px; width:0px; padding:0px;}
+	 40%{height:85%; width:75%;}
+		100%{height:80%; width:70%;}
+		}
+@keyframes animateHome{
+		0%{left:0%; top:0px; transform:scale(0,0);}
+		100%{left:calc(67% - 30px); top:5px; transform:scale(1,1);}
+		}
+@keyframes animateServices{
+		0%{left:0%; top:0px;}
+		100%{left:calc(57% - 30px); top:15px; transform:scale(1,1);}
+		}
+@keyframes animateAbout{
+		0%{left:0%; top:0px;}
+		100%{left:calc(38% - 30px); top:6px; transform:scale(1,1);}
+		}
+@keyframes animateContact{
+		0%{left:0%; top:0px;}
+		100%{left:calc(15% - 30px); 	top:-28px; transform:scale(1,1);}
+		}
+
+
+/*ANIMATE CLOSE NAVIGATION*/
+
+@keyframes animateCloseNav{
+		0%{height:80%; width:70%;}
+		100%{width:0px; height:0px;}
+		}
+@keyframes animateCloseHome{
+		0%{left:calc(67% - 30px); top:5px; transform:scale(1,1);}
+		100%{left:0%; top:0px; transform:scale(0,0);}
+		}
+@keyframes animateCloseServices{
+		0%{left:calc(57% - 30px); top:15px; transform:scale(1,1);}
+		100%{left:0%; top:0px;}
+		}
+@keyframes animateCloseAbout{
+		0%{left:calc(38% - 30px); top:6px; transform:scale(1,1);}
+		100%{left:0%; top:0px;}
+		}
+@keyframes animateCloseContact{
+		0%{left:calc(15% - 30px); 	top:-28px; transform:scale(1,1);}
+		100%{left:0%; top:0px;}
+		}
+		
+.home,.services,.about,.contact{
+		position:relative;
+		background-color:rgba(43,126,209,.9);
+		background-color:#123456;
+		border:1px solid #f4f4f4;
+		width:40px;
+		height:40px;
+		padding:5px;
+		border-radius:50%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		z-index:1;
+		top:0px;
+		transform:scale(0,0);
+		transition: padding .3s;
+		}
+.home:hover,.services:hover,.about:hover,.contact:hover{
+		padding:10px;
+		}
+nav .cover{
+		width:70%;
+		height:70%;
+		display:flex;
+		}
+nav .enclose{
+		width:100%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		}
+nav .cover{
+		border:1px solid lightskyblue;
+		transform:rotateZ(15deg);
+		}
+nav .enclose{
+		border:1px solid pink;
+		transform:rotateZ(45deg);
+		}
+nav .fas, nav .far{
+		display:block;
+		transform:rotateZ(-60deg);
+		font-size:18px;
+		color:rgba(255,255,255,.9);
+		}
+
